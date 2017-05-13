@@ -7,9 +7,10 @@ Proof of Concept backend app using ExpressJS and Sequelize
 
 ## Install Sequelize
 `npm install sequelize --save`
+
 `npm install --save mysql`
 
-[Docs](http://docs.sequelizejs.com/manual/installation/getting-started)
+[Sequelize Documentation](http://docs.sequelizejs.com/manual/installation/getting-started)
 
 ## Launch backend server
 `npm start`
