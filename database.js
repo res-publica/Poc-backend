@@ -1,10 +1,10 @@
 //Sequelize setup code, works is pgsql
 
 var Sequelize = require('sequelize');
-let sequelize = new Sequelize('glycemia', 'root', 'root', {
+let sequelize = new Sequelize('quotedb', 'adrien', '', {
 	host: 'localhost',
-	port: 8889,
-	dialect: 'mysql',
+	port: 5432,
+	dialect: 'postgres',
 	pool: {
 		max: 5,
 		min: 0,
@@ -15,13 +15,13 @@ let sequelize = new Sequelize('glycemia', 'root', 'root', {
 //model definition, docs : http://docs.sequelizejs.com/manual/tutorial/models-definition.html
 var Quote = sequelize.define('quotes', {
 	message: { type: Sequelize.STRING },
-	category: {type: Sequelize.ENUM('stupid', 'dangerous', 'WTF') },
+	category: {type: Sequelize.ENUM('stupid', 'dangerous', 'WTF', 'none') },
 });
 
 Quote.sync({force: true}).then(() => {
 	return Quote.create({
 		message: 'Default quote',
-		category: 'stupid'
+		category: 'none'
 	});
 });
 
