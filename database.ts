@@ -1,9 +1,6 @@
-//Sequelize setup code, works is pgsql
-
-var Sequelize = require('sequelize');
-var env       = process.env.NODE_ENV || 'development';
-var config    = require(__dirname + '/config/config.json')[env];
-var db        = {};
+import * as Sequelize from 'sequelize';
+var env = process.env.NODE_ENV || 'development';
+var config = require(__dirname + '/../config/config.json')[env];
 
 if (process.env.NODE_ENV == 'production') {
 	
@@ -12,19 +9,8 @@ if (process.env.NODE_ENV == 'production') {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-// let sequelize = new Sequelize('quotedb', 'adrien', '', {
-// 	host: 'localhost',
-// 	port: 5432,
-// 	dialect: 'postgres',
-// 	pool: {
-// 		max: 5,
-// 		min: 0,
-// 		idle: 10000
-// 	}
-// });
-
 //model definition, docs : http://docs.sequelizejs.com/manual/tutorial/models-definition.html
-var Quote = sequelize.define('quotes', {
+export const Quote = sequelize.define('quotes', {
 	message: { type: Sequelize.STRING },
 	category: {type: Sequelize.ENUM('stupid', 'dangerous', 'WTF', 'none') },
 });
@@ -36,4 +22,3 @@ Quote.sync({force: true}).then(() => {
 	});
 });
 
-exports.Quote = Quote
