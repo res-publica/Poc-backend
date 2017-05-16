@@ -32,4 +32,4 @@ class App {
         this.express.use('/quotes', quotes.router);
     }
 }
-exports.default = new App().express;
+module.exports = new App().express;
