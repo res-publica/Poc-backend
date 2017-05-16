@@ -2,18 +2,18 @@
 Proof of Concept backend app using ExpressJS and Sequelize
 
 # Usage
-## Install ExpressJS : 
-`npm install express --save`
+## Install Dependencies : 
+`npm install`
 
-## Install Sequelize
-`npm install sequelize --save`
+## Install Gulp pachakge manager globally
+`npm install -g gulp`
 
-`npm install --save mysql`
-
-[Sequelize Documentation](http://docs.sequelizejs.com/manual/installation/getting-started)
+## Run Gulp commands
+`gulp scripts`
 
 ## Launch backend server
 `npm start`
+
 
 ## Configure database
 In database.js where: 
@@ -28,4 +28,4 @@ let sequelize = new Sequelize('glycemia', 'root', 'root', {
 		idle: 10000
 	}
 });
-```
+
