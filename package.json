@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./dist/server.js"
+    "start": "node ./dist/server.js",
+    "postinstall": "gulp scripts"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
