@@ -3,10 +3,9 @@ var env = process.env.NODE_ENV || 'development';
 var config = require(__dirname + '/../config/config.json')[env];
 
 if (process.env.NODE_ENV == 'production') {
-	
-  var sequelize = new Sequelize(config.uri);
+	var sequelize = new Sequelize(config.uri);
 } else {
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
+	var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 //model definition, docs : http://docs.sequelizejs.com/manual/tutorial/models-definition.html
@@ -21,4 +20,3 @@ Quote.sync({force: true}).then(() => {
 		category: 'none'
 	});
 });
-

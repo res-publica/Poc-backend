@@ -1,19 +1,19 @@
 {
-  "development": {
-    "username": "adrien",
-    "password": null,
-    "database": "quotedb",
-    "host": "localhost",
-    "dialect": "postgres"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-	  "uri": "postgres://fpyhudnwfoozbs:ec27ff9431f1f3eb67e719cb1e4a05f37313949d296a84e5bfd40c71cd6dd1aa@ec2-54-247-99-159.eu-west-1.compute.amazonaws.com:5432/dvpidmab47mfq"
-  }
+    "development": {
+        "username": "adrien",
+        "password": null,
+        "database": "quotedb",
+        "host": "localhost",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "root",
+        "password": null,
+        "database": "database_test",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "production": {
+        "uri": "postgres://fpyhudnwfoozbs:ec27ff9431f1f3eb67e719cb1e4a05f37313949d296a84e5bfd40c71cd6dd1aa@ec2-54-247-99-159.eu-west-1.compute.amazonaws.com:5432/dvpidmab47mfq"
+    }
 }

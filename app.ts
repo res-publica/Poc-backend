@@ -17,31 +17,28 @@ var allowCrossDomains = function(req: Request, res: Response, next: Function) {
 }
 
 class App {
-    public express: Application;
-    constructor() {
-        this.express = express();
-        this.middlewares();
-        this.routes();
-    }
+	public express: Application;
+	constructor() {
+		this.express = express();
+		this.middlewares();
+		this.routes();
+	}
 
-    private middlewares(): void {
-        this.express.use(logger('dev'));
-        this.express.use(bodyParser.json());
-        this.express.use(bodyParser.urlencoded({ extended: false }));
-        this.express.use(cookieParser());
-        this.express.use(express.static(path.join(__dirname, '../public')));
-        this.express.use(allowCrossDomains);
-        this.express.set('views', path.join(__dirname, '../views'));
-        this.express.set('view engine', 'pug');
+	private middlewares(): void {
+		this.express.use(logger('dev'));
+		this.express.use(bodyParser.json());
+		this.express.use(bodyParser.urlencoded({ extended: false }));
+		this.express.use(cookieParser());
+		this.express.use(express.static(path.join(__dirname, '../public')));
+		this.express.use(allowCrossDomains);
+		this.express.set('views', path.join(__dirname, '../views'));
+		this.express.set('view engine', 'pug');
+	}
 
-
-    }
-
-    private routes(): void {
-        this.express.use('/', index.router);
-        this.express.use('/quotes', quotes.router);
-
-    }
+	private routes(): void {
+		this.express.use('/', index.router);
+		this.express.use('/quotes', quotes.router);
+	}
 }
 
 module.exports = new App().express;
