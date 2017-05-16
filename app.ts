@@ -29,7 +29,7 @@ class App {
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
         this.express.use(cookieParser());
-        this.express.use(express.static(path.join(__dirname, 'public')));
+        this.express.use(express.static(path.join(__dirname, '../public')));
         this.express.use(allowCrossDomains);
         this.express.set('views', path.join(__dirname, '../views'));
         this.express.set('view engine', 'pug');
