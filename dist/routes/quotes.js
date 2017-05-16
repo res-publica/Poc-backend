@@ -1,7 +1,8 @@
 "use strict";
-const express_1 = require('express');
-const database_1 = require('../database');
-const bodyParser = require('body-parser');
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const database_1 = require("../database");
+const bodyParser = require("body-parser");
 exports.router = express_1.Router();
 var jsonParser = bodyParser.json({ type: 'application/+*json' });
 exports.router.get('/', (req, res) => {

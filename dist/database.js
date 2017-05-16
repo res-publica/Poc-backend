@@ -1,5 +1,6 @@
 "use strict";
-const Sequelize = require('sequelize');
+Object.defineProperty(exports, "__esModule", { value: true });
+const Sequelize = require("sequelize");
 var env = process.env.NODE_ENV || 'development';
 var config = require(__dirname + '/../config/config.json')[env];
 if (process.env.NODE_ENV == 'production') {
