@@ -27,4 +27,5 @@ let sequelize = new Sequelize('glycemia', 'root', 'root', {
 		min: 0,
 		idle: 10000
 	}
-});```
+});
+```
