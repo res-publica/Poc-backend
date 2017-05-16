@@ -26,6 +26,8 @@ class App {
         this.express.use(cookieParser());
         this.express.use(express.static(path.join(__dirname, 'public')));
         this.express.use(allowCrossDomains);
+        this.express.set('views', path.join(__dirname, 'views'));
+        this.express.set('view engine', 'pug');
     }
     routes() {
         this.express.use('/', index.router);
