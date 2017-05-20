@@ -2,7 +2,7 @@
 Proof of Concept backend app using ExpressJS and Sequelize
 
 # Usage
-## Install Dependencies : 
+## Install Dependencies :
 `npm install`
 
 ## Install Gulp pachakge manager globally
@@ -16,7 +16,7 @@ Proof of Concept backend app using ExpressJS and Sequelize
 
 
 ## Configure database
-In database.js where: 
+In database.js where:
 ```javascript
 let sequelize = new Sequelize('glycemia', 'root', 'root', {
 	host: 'HOST',
@@ -28,4 +28,4 @@ let sequelize = new Sequelize('glycemia', 'root', 'root', {
 		idle: 10000
 	}
 });
-
+```
